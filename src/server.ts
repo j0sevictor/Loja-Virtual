@@ -1,9 +1,24 @@
-import express from 'express'
+// Importações
+    import express from 'express'
+    import path from 'path'
 
-const app = express()
+// Configurações
+    const PORT: number = 8000 
+    const app = express()
 
-app.get('/', (request, response) => {
-    response.send('Loja kkkk')
-})  
+    // Arquivos estáticos
+        app.use(express.static(path.join(__dirname, 'public')))
 
-app.listen(8080)
+    // View Engine
+        app.set('view engine', 'pug')
+        app.set('views', './src/views')
+
+// Rotas
+    app.get('/', (request, response) => {
+        response.render('index', {nome: 'Victor'})
+    })
+
+
+app.listen(PORT, () => {
+    console.log('Servidor On')
+})
