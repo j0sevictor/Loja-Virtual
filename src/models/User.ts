@@ -17,6 +17,10 @@ const userSchema = new Schema({
     date_assingne: {
         type: Date,
         default: Date.now()
+    },
+    admin: {
+        type: Boolean,
+        default: false
     }
 })
 

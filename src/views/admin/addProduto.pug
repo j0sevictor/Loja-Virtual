@@ -1,0 +1,23 @@
+extends ../layout/mainAdmin
+
+block main
+    .container.mt-4
+        form(action="/admin/addProduto/validation", method="POST")
+            .row
+                .col 
+                    label(for="title") Nome: 
+                    input.form-control(type="text", name="title", placeholder="Nome do Produto", required)
+            .row
+                .col
+                    label(for="price") Preço por unidade: 
+                    input.form-control(type="number", name="price", placeholder="Preço da Unidade do Produto", step=".01", required)
+                .col
+                    label(for="units") Unidades 
+                    input.form-control(type="number", name="units", placeholder="Unidades Disponíveis", min="1", step="1", required)
+            .row
+                .col 
+                    label(for="description") Descrição
+                    textarea.form-control.unresize(name="description", rows="5", placeholder="Pequena descrição do Produto", required)
+            .row.mt-4
+                .col 
+                    button.btn.btn-success(type="submit") Cadastrar Produto

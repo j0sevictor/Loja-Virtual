@@ -1,33 +1,13 @@
 extends ../layout/mainAdmin
 
 block main 
-    h2 Página do Admin
+    .container
 
-    .card
-        .card-body
-            h3 Ações:
-            .container
-                .row
-                    .col-sm-auto
-                        a(href='#')
-                            button.btn.btn-success Cadastrar um Produto
-                    .col-sm-auto
-                        a(href='#')
-                            button.btn.btn-success Editar dados de um Produto
-                    .col-sm-auto
-                        a(href='#')
-                            button.btn.btn-success Deletar um Produto
-    .card
-        .card-body
-            h3 Visualizar:
-            .container
-                .row
-                    .col-sm-auto
-                        a(href='#')
-                            button.btn.btn-success Produtos Cadastrados
-                    .col-sm-auto
-                        a(href='#')
-                            button.btn.btn-success Vendas Efetuadas
-                    .col-sm-auto
-                        a(href='#')
-                            button.btn.btn-success Outras
+        h2 Produtos:
+
+        a(href='/admin/addProduto')
+            button(type='button').btn.btn-success Cadastrar um Produto
+        a(href='#')
+            button(type='button').btn.btn-success Editar dados de um Produto
+        a(href='#')
+            button(type='button').btn.btn-success Deletar um Produto

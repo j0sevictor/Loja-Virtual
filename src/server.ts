@@ -2,6 +2,7 @@
     import express from 'express'
     import path from 'path'
     import mongoose from 'mongoose'
+    import bodyParser from 'body-parser'
     import { adminRouter } from '@routes/admin'
 
 // Configurações
@@ -22,6 +23,10 @@
     }).catch((erro) => {
         console.log('Erro de conexao. ' + erro)
     })
+
+    // Body Parser midlewere
+    app.use(bodyParser.urlencoded({extended: true}))
+    app.use(bodyParser.json())
 
 // Rotas
     app.get('/', (request, response) => {

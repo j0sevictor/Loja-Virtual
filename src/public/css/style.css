@@ -1,0 +1,19 @@
+#mainNav {
+    background-color: rgb(15, 15, 15);
+}
+.unresize {
+    resize: none;
+}
+
+header.masthead {
+    height: 100vh;
+    padding-top: 6rem;
+}
+footer {
+    background-color: rgb(15, 15, 15);
+    color: white;
+}
+
+div.row {
+    margin-top: 10px;
+}
